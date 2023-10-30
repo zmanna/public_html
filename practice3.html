@@ -1,0 +1,28 @@
+
+<html>
+    <body>
+        <label for="ps1">Enter Password:</label>
+        <input type="text" id="password1" name="ps1">
+        <br><br>
+        <label for="ps2">Re-enter password</label>
+        <input type="text" id="password2" name="ps2">
+        <br>
+        <button onclick="checkPasswords()">Check</button>
+        <script>
+            function checkPasswords()
+            {
+                var pass1 = document.getElementById("password1").value;
+                var pass2 = document.getElementById("password2").value;
+                if(pass1.length != 8){
+                    alert("Your password is not longer than 8 characters");
+                }
+                else if(pass1 != pass2){
+                    alert("Your passwords do not match");
+                }
+                else{
+                    alert("YOUR PASSWORDS MATCH")
+                }
+            }
+        </script>
+    </body>
+</html>
